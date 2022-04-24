@@ -1,0 +1,13 @@
+texts:
+  PlaceHolderAPI:
+    'online':
+      placeholder: '%server_online%'
+      old_text: '3'
+      new_text: '5'
+      require_player: false
+  MVdWPlaceholderAPI:
+    'online':
+      placeholder: '%server_online%'
+      old_text: '3'
+      new_text: '5'
+      require_player: false

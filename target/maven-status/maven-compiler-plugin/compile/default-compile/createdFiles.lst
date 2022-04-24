@@ -1,0 +1,8 @@
+xbuhari\pw\PHReplacer\Main.class
+xbuhari\pw\PHReplacer\plugin\listener\PHListener.class
+xbuhari\pw\PHReplacer\plugin\ReplaceManager.class
+xbuhari\pw\PHReplacer\spigot\SpigotPlugin.class
+xbuhari\pw\PHReplacer\plugin\listener\MvDwPHListener.class
+xbuhari\pw\PHReplacer\plugin\ReplaceManager$PHMode.class
+xbuhari\pw\PHReplacer\plugin\cmd\MainCMD.class
+xbuhari\pw\PHReplacer\plugin\PHRText.class
