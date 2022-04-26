@@ -1,26 +1,24 @@
 package xbuhari.pw.PHReplacer.plugin;
 
+import java.util.HashMap;
+import java.util.List;
+
 public class PHRText {
+
     private final String id;
     private final String placeholder;
-    private final String old_text;
-    private final String new_text;
+    private final HashMap<String, String> replaces;
     private final Boolean req_player;
 
-    public PHRText(String id, String ph, String _old, String _new, Boolean _req) {
+    public PHRText(String id, String ph, HashMap<String, String> _rep, Boolean _req) {
         this.id = id;
         this.placeholder = ph;
-        this.old_text = _old;
-        this.new_text = _new;
+        this.replaces = (HashMap<String, String>) _rep.clone();
         this.req_player = _req;
     }
 
-    public String getNew_text() {
-        return new_text;
-    }
-
-    public String getOld_text() {
-        return old_text;
+    public HashMap<String, String> getReplaces() {
+        return replaces;
     }
 
     public Boolean getReq_player() {

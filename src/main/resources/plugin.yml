@@ -1,5 +1,5 @@
 name: PHReplacer
-version: 0.1
+version: 1.2
 author: xBuhari
 main: xbuhari.pw.PHReplacer.Main
 softdepend:
@@ -8,3 +8,5 @@ softdepend:
 commands:
   phreplacer:
     description: Main Command
+    aliases:
+      - phr

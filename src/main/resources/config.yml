@@ -1,13 +1,15 @@
 texts:
   PlaceHolderAPI:
-    'online':
-      placeholder: '%server_online%'
-      old_text: '3'
-      new_text: '5'
-      require_player: false
+    'test': # yeni placeholderimizin id'si
+      placeholder: '%test1_test2%' # çıktısını düzenleyeceğimiz eski placeholder
+      replaces: # çıktı düzenleme işlemleri
+        'false': 'yanlış'
+        'true': 'doğru'
+        '$regex$_(.*?)': 'hepsi değişti'
+      require_player: false # eğer placeholder oyuncu için kullanılacaksa true olmalı
   MVdWPlaceholderAPI:
     'online':
       placeholder: '%server_online%'
-      old_text: '3'
-      new_text: '5'
+      replaces:
+        'false': 'yanlış'
       require_player: false

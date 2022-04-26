@@ -1,5 +1,6 @@
 xbuhari\pw\PHReplacer\Main.class
 xbuhari\pw\PHReplacer\plugin\listener\PHListener.class
+xbuhari\pw\PHReplacer\spigot\Utils.class
 xbuhari\pw\PHReplacer\plugin\ReplaceManager.class
 xbuhari\pw\PHReplacer\spigot\SpigotPlugin.class
 xbuhari\pw\PHReplacer\plugin\listener\MvDwPHListener.class

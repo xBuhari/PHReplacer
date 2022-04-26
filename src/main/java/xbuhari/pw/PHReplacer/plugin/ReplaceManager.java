@@ -1,6 +1,5 @@
 package xbuhari.pw.PHReplacer.plugin;
 
-import be.maximvdw.placeholderapi.PlaceholderAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.ConfigurationSection;
 import xbuhari.pw.PHReplacer.Main;
@@ -8,9 +7,7 @@ import xbuhari.pw.PHReplacer.plugin.cmd.MainCMD;
 import xbuhari.pw.PHReplacer.plugin.listener.MvDwPHListener;
 import xbuhari.pw.PHReplacer.plugin.listener.PHListener;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 public class ReplaceManager {
     private HashMap<PHMode, HashMap<String, PHRText>> textList;
@@ -41,11 +38,14 @@ public class ReplaceManager {
             HashMap<String, PHRText> _temp = new HashMap<>();
             ConfigurationSection _csPh = _cs.getConfigurationSection(phMode.toString());
             for (String _keyPH : _csPh.getKeys(false)) {
+                HashMap<String, String> replaces = new HashMap<>();
+                for (String _key : _csPh.getConfigurationSection(_keyPH + ".replaces").getKeys(false)) {
+                    replaces.put(_key, _csPh.getConfigurationSection(_keyPH + ".replaces").getString(_key));
+                }
                 _temp.put(_keyPH, new PHRText(
                         _keyPH,
                         _csPh.getString(_keyPH + ".placeholder"),
-                        _csPh.getString( _keyPH + ".old_text"),
-                        _csPh.getString(_keyPH + ".new_text"),
+                        replaces,
                         _csPh.getBoolean(_keyPH + ".require_player")
                 ));
             }
